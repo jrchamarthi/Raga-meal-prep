@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Telugu‑Fusion Meal Planner</title>
+  <meta name="description" content="7-Day Healthy Telugu-Fusion Meal Planner">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Meal Planner">
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="style.css">
+  <script defer src="data.js"></script>
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <header>
+    <h1>🍛 Telugu‑Fusion Meal Planner</h1>
+    <div class="date-row">
+      <span id="todayStr"></span>
+      <button id="installBtn" class="ghost">➕ Add to Home Screen</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="card focus">
+      <h2>Today</h2>
+      <div id="todayContent" class="grid"></div>
+      <div class="prep">
+        <h3>🧑‍🍳 Prep Now</h3>
+        <p id="prepNow"></p>
+        <h3>🌙 Prep Tonight (for Tomorrow)</h3>
+        <p id="prepTonight"></p>
+      </div>
+      <div class="trackers">
+        <div class="tracker">
+          <h3>✅ Meals Done</h3>
+          <ul id="checklist"></ul>
+        </div>
+        <div class="tracker">
+          <h3>💧 Water</h3>
+          <div id="waterTracker" class="pills"></div>
+        </div>
+        <div class="streak">
+          <h3>🔥 Streak</h3>
+          <p><span id="streakDays">0</span> days</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="card next">
+      <h2>Tomorrow Preview</h2>
+      <div id="tomorrowContent" class="grid"></div>
+    </section>
+
+    <section class="card legend">
+      <h2>Calorie Legend</h2>
+      <div class="legend-row">
+        <span class="pill bfast">Breakfast ~250</span>
+        <span class="pill lunch">Lunch ~350</span>
+        <span class="pill snack">Snack ~100</span>
+        <span class="pill dinner">Dinner ~200</span>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <small>Install this web app to your iPhone Home Screen for quick access. Works offline after first open.</small>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,48 @@
+
+:root{
+  --bg:#0b132b;
+  --card:#1c2541;
+  --accent:#5bc0be;
+  --accent2:#6fffe9;
+  --text:#f7f7ff;
+  --muted:#b8c1ec;
+  --bfast:#7bd389;
+  --lunch:#f7d794;
+  --snack:#9dc4f8;
+  --dinner:#ffb3b3;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif}
+header{padding:16px 20px;background:linear-gradient(90deg,var(--card),#243b55);position:sticky;top:0;backdrop-filter:blur(6px)}
+h1{margin:0;font-size:22px}
+.date-row{display:flex;gap:12px;align-items:center;justify-content:space-between;color:var(--muted)}
+.ghost{background:transparent;border:1px solid var(--accent);color:var(--accent);padding:8px 12px;border-radius:10px}
+main{padding:16px;display:grid;gap:16px;max-width:980px;margin:0 auto}
+.card{background:var(--card);border-radius:16px;padding:16px;border:1px solid rgba(255,255,255,.06);box-shadow:0 8px 20px rgba(0,0,0,.25)}
+.card h2{margin-top:0}
+.grid{display:grid;gap:12px;grid-template-columns:repeat(2,minmax(0,1fr))}
+.meal{border-left:4px solid var(--accent);padding:8px 10px;background:rgba(255,255,255,.03);border-radius:8px}
+.meal h4{margin:0 0 4px 0}
+.meal.bfast{border-color:var(--bfast)}
+.meal.lunch{border-color:var(--lunch)}
+.meal.snack{border-color:var(--snack)}
+.meal.dinner{border-color:var(--dinner)}
+.prep h3{margin-bottom:6px}
+.trackers{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:10px}
+#checklist{list-style:none;padding:0;margin:0;display:grid;gap:6px}
+#checklist li{display:flex;align-items:center;gap:8px}
+.checkbox{width:20px;height:20px;border-radius:6px;border:2px solid var(--accent);display:flex;align-items:center;justify-content:center;cursor:pointer}
+.checkbox.done{background:var(--accent)}
+.pills{display:flex;gap:8px;flex-wrap:wrap}
+.pill{padding:6px 10px;border-radius:999px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);font-size:12px}
+.legend-row{display:flex;gap:8px;flex-wrap:wrap}
+.legend .pill{color:#000}
+.bfast{background:var(--bfast)}
+.lunch{background:var(--lunch)}
+.snack{background:var(--snack)}
+.dinner{background:var(--dinner)}
+footer{padding:20px;text-align:center;color:var(--muted)}
+@media (max-width:640px){
+  .grid{grid-template-columns:1fr}
+  .trackers{grid-template-columns:1fr}
+}
